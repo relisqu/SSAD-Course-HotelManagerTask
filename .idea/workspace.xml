@@ -73,10 +73,15 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="839" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1633510083154">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="699" y="99" key="#com.intellij.ide.util.MemberChooser" timestamp="1633547627427">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="699" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1633547627427" />
     <state x="839" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1633510083154" />
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1633538582696">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1633538582696" />
     <state x="781" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1633510356797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
