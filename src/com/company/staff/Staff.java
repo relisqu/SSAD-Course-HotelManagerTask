@@ -8,6 +8,7 @@ public class Staff {
     private boolean isAvailable;
 
     public void doJob() {
+        System.out.println("I am doing my job\n");
     }
 
     public boolean isAvailable() {
