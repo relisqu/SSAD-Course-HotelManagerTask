@@ -1,5 +1,5 @@
 package com.company.staff;
 
-public class SecurityGuard implements Staff{
+public class SecurityGuard extends Staff{
 
 }

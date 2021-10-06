@@ -1,4 +1,4 @@
 package com.company.staff;
 
-public class Cook implements Staff{
+public class Cook extends Staff {
 }
