@@ -4,10 +4,7 @@
     <list default="true" id="37629f6e-4432-4cb9-b035-b93ffe00ae4b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/RoomAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RoomAccess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/administration/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/administration/RoomManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/room/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/room/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

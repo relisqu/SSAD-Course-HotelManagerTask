@@ -7,8 +7,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 
 public interface RoomAccess {
-    ArrayList<Room> getRooms(Human client,
-                             RoomType type, int peopleCount);
+    ArrayList<Room> getRooms();
 
     void updateRooms(Room... updatedRooms);
 
