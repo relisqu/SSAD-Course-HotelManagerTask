@@ -3,8 +3,6 @@ package com.company;
 import com.company.room.Room;
 import com.company.room.RoomType;
 import com.company.staff.Staff;
-
-import java.sql.Time;
 import java.util.ArrayList;
 
 public class Hotel implements RoomAccess, StaffAccess {
@@ -34,7 +32,7 @@ public class Hotel implements RoomAccess, StaffAccess {
     }
 
     @Override
-    public ArrayList<Room> getRooms(Human client, RoomType type, int peopleCount, Time departureTime) {
+    public ArrayList<Room> getRooms(Human client, RoomType type, int peopleCount) {
         return null;
     }
 

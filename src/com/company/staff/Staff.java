@@ -9,6 +9,14 @@ public class Staff {
 
     public void doJob() {
     }
+
+    public boolean isAvailable() {
+        return isAvailable;
+    }
+
+    public Human getPersonalInformation() {
+        return personalInformation;
+    }
 }
 
 

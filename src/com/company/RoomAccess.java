@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public interface RoomAccess {
     ArrayList<Room> getRooms(Human client,
-                             RoomType type, int peopleCount, Time departureTime);
+                             RoomType type, int peopleCount);
 
     void updateRooms(Room... updatedRooms);
 

@@ -13,7 +13,7 @@ public class RoomManager {
 
     }
     public void bookRoom(RoomAccess access, Human client,
-                         RoomType type, int peopleCount, Time departureTime) {
+                         RoomType type, int peopleCount) {
     }
     public void unbookRoom(RoomAccess access, Room room){}
 }
