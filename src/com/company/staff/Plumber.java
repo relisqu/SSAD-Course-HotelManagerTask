@@ -1,4 +1,4 @@
 package com.company.staff;
 
-public class Plumber implements Staff{
+public class Plumber extends Staff{
 }
