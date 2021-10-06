@@ -32,7 +32,7 @@ public class Hotel implements RoomAccess, StaffAccess {
     }
 
     @Override
-    public ArrayList<Room> getRooms(Human client, RoomType type, int peopleCount) {
+    public ArrayList<Room> getRooms() {
         return null;
     }
 
