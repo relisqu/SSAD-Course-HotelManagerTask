@@ -16,7 +16,7 @@ public class Deliveryman extends Staff {
     @Override
     public void doJob(int roomNumber, String message) {
         setAvailable(false);
-        System.out.println("I am Deliveryman. Someday Yandex rovers will replace me\n");
+        System.out.println("I am Deliveryman. Someday Yandex rovers will replace me");
         System.out.println("Currently in room: " + roomNumber + " fixing " + message);
         setAvailable(true);
     }

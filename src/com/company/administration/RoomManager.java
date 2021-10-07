@@ -6,6 +6,7 @@ import com.company.room.Room;
 import com.company.room.RoomType;
 
 import java.sql.Time;
+import java.util.ArrayList;
 
 /**
  * Represents Hotel Room Manager.
@@ -43,6 +44,15 @@ public class RoomManager {
                 }
             }
         }
+    }
+
+    /**
+     * Get the list of a hotel rooms
+     * @param access hotel rooms information
+     * @return       list of hotel rooms
+     */
+    public ArrayList<Room> getRoomList(RoomAccess access) {
+        return access.getRooms();
     }
 
     /**

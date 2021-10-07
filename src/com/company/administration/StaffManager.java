@@ -4,6 +4,8 @@ package com.company.administration;
 import com.company.StaffAccess;
 import com.company.staff.Staff;
 
+import java.util.ArrayList;
+
 /**
  * Represents Hotel Staff Manager.
  * He resolves all problems related to
@@ -30,6 +32,15 @@ public class StaffManager {
      */
     public void fireStaff(StaffAccess access, Staff... workers) {
         access.deleteStaff(workers);
+    }
+
+    /**
+     * Get a list of staff members
+     * @param access hotel staff information
+     * @return       list of staff members
+     */
+    public ArrayList<Staff> getStaffList(StaffAccess access) {
+        return access.getStaff();
     }
 
     /**

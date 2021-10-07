@@ -4,6 +4,7 @@ import com.company.administration.RoomManager;
 import com.company.administration.StaffManager;
 import com.company.room.Room;
 import com.company.room.RoomType;
+import com.company.staff.Plumber;
 import com.company.staff.SecurityGuard;
 import com.company.staff.Staff;
 import com.company.staff.StaffType;
@@ -27,8 +28,10 @@ public class Main {
         RoomManager roomManager=new RoomManager();
         StaffManager staffManager= new StaffManager();
         for (int i=0;i<hotel.getRooms().size();i++){
-            System.out.println(hotel.getRooms().get(i).getNumber());
+            System.out.print(hotel.getRooms().get(i).getNumber());
+            System.out.print(' ');
         }
+        System.out.println();
         Human client1= new Human("Kopeikina","Anna");
         Human client2= new Human("Tyulebaeva","Karina");
         Human client3= new Human("Domrachev","Ivan");
@@ -42,7 +45,42 @@ public class Main {
         for (int i = 0; i < hotel.getStaff().size(); i++) {
             System.out.println(hotel.getStaff().get(i).getPersonalInformation().getName());
         }
-        staffManager.makeOrder(PlumberCreator.class,hotel,2,"Help, our pump was broken :(");
-
+        staffManager.makeOrder(Plumber.class, hotel,2,"Help, our pump was broken :(");
+        ArrayList<Staff> list = staffManager.getStaffList(hotel);
+        for (Staff worker : list) {
+            staffManager.fireStaff(hotel, worker);
+        }
+        System.out.println("Fired everybody");
+        staffManager.makeOrder(Plumber.class, hotel,2,"Help, our pump was broken :(");
+        roomManager.bookRoom(hotel, client1, RoomType.LUX, 2);
+        roomManager.bookRoom(hotel, client2, RoomType.ECONOMY, 1);
+        ArrayList<Room> rooms = roomManager.getRoomList(hotel);
+        for (Room room : rooms) {
+            if (room.isOccupied()) {
+                if (room.getType() == RoomType.LUX) {
+                    System.out.println("Found the room where Ann lives!");
+                    System.out.println("People live here: " + room.getCurrentResidentsCount());
+                    System.out.println("Room number: " + room.getNumber());
+                    System.out.println("Room is occupied? " + room.isOccupied());
+                    roomManager.unbookRoom(hotel, room);
+                    System.out.println("Kicked her out!");
+                    System.out.println("People live here: " + room.getCurrentResidentsCount());
+                    System.out.println("Room number: " + room.getNumber());
+                    System.out.println("Room is occupied? " + room.isOccupied());
+                }
+                if (room.getType() == RoomType.ECONOMY) {
+                    System.out.println("Found the room where Karina lives!");
+                    System.out.println("People live here: " + room.getCurrentResidentsCount());
+                    System.out.println("Room number: " + room.getNumber());
+                    System.out.println("Room is occupied? " + room.isOccupied());
+                    roomManager.unbookRoom(hotel, room);
+                    System.out.println("Kicked her out!");
+                    System.out.println("People live here: " + room.getCurrentResidentsCount());
+                    System.out.println("Room number: " + room.getNumber());
+                    System.out.println("Room is occupied? " + room.isOccupied());
+                    System.out.println("\n\n");
+                }
+            }
+        }
     }
 }

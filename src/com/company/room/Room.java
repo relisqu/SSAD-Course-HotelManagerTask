@@ -84,6 +84,12 @@ public class Room {
     }
 
     /**
+     * Get personal information of a responsible person
+     * @return personal information of a main resident
+     */
+    public Human getResident() { return resident; }
+
+    /**
      * Get information of current residents count
      * @return current number of residents
      */
