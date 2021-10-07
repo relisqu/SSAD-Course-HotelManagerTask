@@ -33,8 +33,7 @@ public class Room {
      * @param residentsCount number of residents
      */
     public void checkIn(Human resident, int residentsCount) {
-        //   TODO: check if number of residents does not exceed room size.
-        if (!isOccupied) {
+        if (!isOccupied && residentsCount <= getSize()) {
             this.resident = resident;
             this.currentResidentsCount = residentsCount;
             isOccupied = true;

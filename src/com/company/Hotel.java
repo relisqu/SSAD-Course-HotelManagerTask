@@ -23,7 +23,7 @@ public class Hotel implements RoomAccess, StaffAccess {
      * Get information of currently available staff
      * @return available hotel staff
      */
-    // TODO: override here as well or remove other overrides
+    @Override
     public ArrayList<Staff> getStaff() {
         return staff;
     }
