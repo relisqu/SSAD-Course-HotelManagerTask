@@ -14,8 +14,7 @@ public interface StaffAccess {
      * Get information of currently available staff
      * @return available hotel staff
      */
-    // TODO: remove public
-    public ArrayList<Staff> getStaff();
+    ArrayList<Staff> getStaff();
 
     /**
      * Update staff information

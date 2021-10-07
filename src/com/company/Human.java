@@ -13,14 +13,11 @@ public class Human {
 
     /**
      * Parametrized constructor allowing to specify human personal data
-     * @param id      unique ID
      * @param surname person last name
      * @param name    person first name
      */
-    // TODO: remove id from constructor, it should be created **inside** constructor
-    // https://www.baeldung.com/java-uuid
-    public Human(UUID id, String surname, String name) {
-        this.id = id;
+    public Human(String surname, String name) {
+        this.id = UUID.randomUUID();
         this.surname = surname;
         this.name = name;
     }
