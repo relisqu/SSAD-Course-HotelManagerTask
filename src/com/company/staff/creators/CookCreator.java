@@ -1,8 +1,7 @@
 package com.company.staff.creators;
 
-import com.company.staff.Cook;
-import com.company.staff.SecurityGuard;
-import com.company.staff.Staff;
+import com.company.Human;
+import com.company.staff.*;
 
 /**
  * Factory of Cooks
@@ -13,7 +12,7 @@ public class CookCreator extends StaffCreator {
      * @return new staff member
      */
     @Override
-    public Staff createStaff() {
-        return new Cook();
+    public Staff createStaff(Human information, StaffType type){
+        return new Cook(information,type);
     }
 }

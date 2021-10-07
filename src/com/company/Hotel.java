@@ -10,8 +10,8 @@ import java.util.stream.Collectors;
  * Represents Hotel Database instance
  */
 public class Hotel implements RoomAccess, StaffAccess {
-    private ArrayList<Room> rooms;
-    private ArrayList<Staff> staff;
+    private ArrayList<Room> rooms = new ArrayList<>();
+    private ArrayList<Staff> staff = new ArrayList<>();
 
     /**
      * Parametrized constructor allows specifying initial rooms set

@@ -1,8 +1,7 @@
 package com.company.staff.creators;
 
-import com.company.staff.Deliveryman;
-import com.company.staff.SecurityGuard;
-import com.company.staff.Staff;
+import com.company.Human;
+import com.company.staff.*;
 
 /**
  * Factory of Deliverymans
@@ -13,7 +12,7 @@ public class DeliverymanCreator extends StaffCreator {
      * @return new staff member
      */
     @Override
-    public Staff createStaff() {
-        return new Deliveryman();
+    public Staff createStaff(Human information, StaffType type){
+        return new Deliveryman(information,type);
     }
 }

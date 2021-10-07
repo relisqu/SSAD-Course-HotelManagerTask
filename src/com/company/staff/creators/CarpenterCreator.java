@@ -1,8 +1,7 @@
 package com.company.staff.creators;
 
-import com.company.staff.Carpenter;
-import com.company.staff.SecurityGuard;
-import com.company.staff.Staff;
+import com.company.Human;
+import com.company.staff.*;
 
 /**
  * Factory of Carpenters
@@ -13,7 +12,7 @@ public class CarpenterCreator extends StaffCreator{
      * @return new staff member
      */
     @Override
-    public Staff createStaff() {
-        return new Carpenter();
+    public Staff createStaff(Human information, StaffType type){
+        return new Carpenter(information,type);
     }
 }

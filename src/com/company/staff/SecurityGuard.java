@@ -1,9 +1,15 @@
 package com.company.staff;
 
+import com.company.Human;
+
 /**
  * Represents Security Guard staff member
  */
 public class SecurityGuard extends Staff{
+    public SecurityGuard(Human personalInformation, StaffType type) {
+        super(personalInformation, type);
+    }
+
     /**
      * Performs the Security Guard required to do.
      */

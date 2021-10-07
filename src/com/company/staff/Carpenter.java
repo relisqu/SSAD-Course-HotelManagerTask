@@ -1,9 +1,15 @@
 package com.company.staff;
 
+import com.company.Human;
+
 /**
  * Represents Carpenter staff member
  */
 public class Carpenter extends Staff{
+    public Carpenter(Human personalInformation, StaffType type) {
+        super(personalInformation, type);
+    }
+
     /**
      * Performs the Carpenter required to do.
      */
