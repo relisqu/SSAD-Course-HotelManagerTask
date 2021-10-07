@@ -4,6 +4,7 @@ import com.company.room.Room;
 import com.company.staff.Staff;
 import java.util.ArrayList;
 import java.util.ListIterator;
+import java.util.stream.Collectors;
 
 public class Hotel implements RoomAccess, StaffAccess {
     private ArrayList<Room> rooms;
@@ -55,13 +56,14 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     @Override
     public void deleteStaff(Staff... deletedStaff) {
-        for(Staff staffToDelete : deletedStaff) {
-            ListIterator<Staff> it = findStaff(staffToDelete);
-
-            if(it.hasNext()) {
-                it.remove();
+        staff = staff.stream().filter(w -> {
+            for (Staff deletedW : deletedStaff) {
+                if (deletedW.getPersonalInformation().getId() == w.getPersonalInformation().getId()) {
+                    return false;
+                }
             }
-        }
+            return true;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 
     @Override
