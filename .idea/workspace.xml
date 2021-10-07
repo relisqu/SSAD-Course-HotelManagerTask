@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37629f6e-4432-4cb9-b035-b93ffe00ae4b" name="Default Changelist" comment="">
+    <list default="true" id="37629f6e-4432-4cb9-b035-b93ffe00ae4b" name="Default Changelist" comment="RoomManager methods + JavaDoc (частично)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Hotel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/RoomAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/RoomAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/administration/RoomManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/administration/RoomManager.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,23 +14,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1yuJwoRGt1ALCgFpPEiQWptqLF9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
@@ -67,21 +70,42 @@
       <option name="presentableId" value="Default" />
       <updated>1633095781128</updated>
     </task>
+    <task id="LOCAL-00001" summary="RoomManager methods + JavaDoc (частично)">
+      <created>1633558839777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633558839777</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="699" y="99" key="#com.intellij.ide.util.MemberChooser" timestamp="1633547627427">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="699" y="99" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1633547627427" />
-    <state x="839" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1633510083154" />
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog" timestamp="1633538582696">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="337" y="164" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1633538582696" />
-    <state x="781" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1633510356797">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="781" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1633510356797" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="Karina's-branch" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="RoomManager methods + JavaDoc (частично)" />
+    <option name="LAST_COMMIT_MESSAGE" value="RoomManager methods + JavaDoc (частично)" />
   </component>
 </project>
