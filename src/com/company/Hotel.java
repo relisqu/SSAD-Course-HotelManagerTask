@@ -1,9 +1,11 @@
 package com.company;
 
 import com.company.room.Room;
-import com.company.room.RoomType;
 import com.company.staff.Staff;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.ListIterator;
+import java.util.stream.Collectors;
 
 /**
  * Represents Hotel Database instance
@@ -17,6 +19,7 @@ public class Hotel implements RoomAccess, StaffAccess {
      * @param rooms initial rooms set
      */
     public Hotel(ArrayList<Room> rooms) {
+        this.rooms = rooms;
     }
 
     /**
@@ -34,16 +37,30 @@ public class Hotel implements RoomAccess, StaffAccess {
      */
     @Override
     public void updateStaff(Staff... updatedStaff) {
-
+        staff = staff.stream().map(w -> {
+            for (Staff updatedW : updatedStaff) {
+                if (updatedW.getPersonalInformation().getId() == w.getPersonalInformation().getId()) {
+                    return updatedW;
+                }
+            }
+            return w;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 
     /**
      * Remove hotel staff
-     * @param firedStaff staff to be fired
+     * @param deletedStaff to be fired
      */
     @Override
-    public void deleteStaff(Staff... firedStaff) {
-
+    public void deleteStaff(Staff... deletedStaff) {
+        staff = staff.stream().filter(w -> {
+            for (Staff deletedW : deletedStaff) {
+                if (deletedW.getPersonalInformation().getId() == w.getPersonalInformation().getId()) {
+                    return false;
+                }
+            }
+            return true;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 
     /**
@@ -52,7 +69,15 @@ public class Hotel implements RoomAccess, StaffAccess {
      */
     @Override
     public void createStaff(Staff... createdStaff) {
-
+        staff.addAll(Arrays.stream(createdStaff).filter(w ->
+        {
+            for (Staff currentStaff : staff) {
+                if (currentStaff.getPersonalInformation().getId() == w.getPersonalInformation().getId()) {
+                    return false;
+                }
+            }
+            return true;
+        }).collect(Collectors.toCollection(ArrayList::new)));
     }
 
     /**
@@ -61,7 +86,7 @@ public class Hotel implements RoomAccess, StaffAccess {
      */
     @Override
     public ArrayList<Room> getRooms() {
-        return null;
+        return rooms;
     }
 
     /**
@@ -69,8 +94,15 @@ public class Hotel implements RoomAccess, StaffAccess {
      * @param newRooms rooms to be updated
      */
     @Override
-    public void updateRooms(Room... newRooms) {
-
+    public void updateRooms(Room... updatedRooms) {
+        rooms = rooms.stream().map(w -> {
+            for (Room updatedW : updatedRooms) {
+                if (updatedW.getNumber() == w.getNumber()) {
+                    return updatedW;
+                }
+            }
+            return w;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 
     /**
@@ -79,6 +111,13 @@ public class Hotel implements RoomAccess, StaffAccess {
      */
     @Override
     public void deleteRooms(Room... deletedRooms) {
-
+        rooms = rooms.stream().filter(w -> {
+            for (Room deletedW : deletedRooms) {
+                if (deletedW.getNumber() == w.getNumber()) {
+                    return false;
+                }
+            }
+            return true;
+        }).collect(Collectors.toCollection(ArrayList::new));
     }
 }
