@@ -19,7 +19,8 @@ public class StaffManager {
      * @param message    additional information from a client
      * @param <S>        generic of a staff requested
      */
-    public <S> void makeOrder(StaffAccess access, int roomNumber, String message) {
+    public <S> void makeOrder(Class<S> neededWorker, StaffAccess access, int roomNumber, String message) {
+        access.getStaff().stream().filter(w -> w.getClass().equals(neededWorker)).reduce((first, second) -> first).ifPresent(worker -> worker.doJob(roomNumber, message));
     }
 
     /**
@@ -28,7 +29,7 @@ public class StaffManager {
      * @param workers workers to fire
      */
     public void fireStaff(StaffAccess access, Staff... workers) {
-
+        access.deleteStaff(workers);
     }
 
     /**
@@ -37,6 +38,6 @@ public class StaffManager {
      * @param workers workers to hire
      */
     public void hireStaff(StaffAccess access, Staff... workers) {
-
+        access.createStaff(workers);
     }
 }
