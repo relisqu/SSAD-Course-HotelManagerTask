@@ -4,6 +4,7 @@ import com.company.administration.RoomManager;
 import com.company.administration.StaffManager;
 import com.company.room.Room;
 import com.company.room.RoomType;
+import com.company.staff.Plumber;
 import com.company.staff.SecurityGuard;
 import com.company.staff.Staff;
 import com.company.staff.StaffType;
@@ -34,7 +35,6 @@ public class Main {
         Human client3= new Human("Domrachev","Ivan");
 
         Human slave1= new Human("Alentev","Igor");
-
         Human slave2= new Human("Asatullaev","Maruf");
 
         staffManager.hireStaff(hotel,new PlumberCreator().createStaff(slave1, StaffType.IRREGULAR));
@@ -42,7 +42,7 @@ public class Main {
         for (int i = 0; i < hotel.getStaff().size(); i++) {
             System.out.println(hotel.getStaff().get(i).getPersonalInformation().getName());
         }
-        staffManager.makeOrder(PlumberCreator.class,hotel,2,"Help, our pump was broken :(");
+        staffManager.makeOrder(Plumber.class,hotel,2,"pump");
 
     }
 }

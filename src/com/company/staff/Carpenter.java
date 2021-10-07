@@ -17,7 +17,7 @@ public class Carpenter extends Staff{
     public void doJob(int roomNumber, String message) {
         setAvailable(false);
         System.out.println("I am Carpenter. I will open bathroom door if you got stuck in it\n");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
+        System.out.println("Currently fixing " + message+" in room №"+ roomNumber);
         setAvailable(true);
     }
 }

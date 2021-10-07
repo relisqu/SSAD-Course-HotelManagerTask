@@ -17,7 +17,7 @@ public class SecurityGuard extends Staff{
     public void doJob(int roomNumber, String message) {
         setAvailable(false);
         System.out.println("I am Security. Hey, where is your mask?!\n");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
+        System.out.println("Currently fixing " + message+" in room №"+ roomNumber);
         setAvailable(true);
     }
 }

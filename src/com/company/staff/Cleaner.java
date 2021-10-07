@@ -17,7 +17,7 @@ public class Cleaner extends Staff{
     public void doJob(int roomNumber, String message) {
         setAvailable(false);
         System.out.println("I am Cleaner. I will come every 7-10 days. Or not\n");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
+        System.out.println("Currently fixing " + message+" in room №"+ roomNumber);
         setAvailable(true);
     }
 }
