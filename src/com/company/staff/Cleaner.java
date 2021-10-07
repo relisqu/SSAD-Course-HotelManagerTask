@@ -1,9 +1,15 @@
 package com.company.staff;
 
+import com.company.Human;
+
 /**
  * Represents Cleaner staff member
  */
 public class Cleaner extends Staff{
+    public Cleaner(Human personalInformation, StaffType type) {
+        super(personalInformation, type);
+    }
+
     /**
      * Performs the Cleaner required to do.
      */

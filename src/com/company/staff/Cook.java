@@ -1,9 +1,15 @@
 package com.company.staff;
 
+import com.company.Human;
+
 /**
  * Represents Cook staff member
  */
 public class Cook extends Staff {
+    public Cook(Human personalInformation, StaffType type) {
+        super(personalInformation, type);
+    }
+
     /**
      * Performs the Cook required to do.
      */

@@ -1,9 +1,15 @@
 package com.company.staff;
 
+import com.company.Human;
+
 /**
  * Represents Deliveryman staff member
  */
 public class Deliveryman extends Staff {
+    public Deliveryman(Human personalInformation, StaffType type) {
+        super(personalInformation, type);
+    }
+
     /**
      * Performs the Deliveryman required to do.
      */
