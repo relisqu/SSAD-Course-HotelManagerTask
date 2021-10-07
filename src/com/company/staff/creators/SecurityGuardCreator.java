@@ -12,6 +12,7 @@ public class SecurityGuardCreator extends StaffCreator {
      * @return new staff member
      */
     @Override
+
     public Staff createStaff() {
         return new SecurityGuard();
     }
