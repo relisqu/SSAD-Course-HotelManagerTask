@@ -13,8 +13,9 @@ public class Staff {
     /**
      * Performs the work member required to do.
      */
-    public void doJob() {
+    public void doJob(int roomNumber, String message) {
         System.out.println("I am doing my job\n");
+        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
     }
 
     /**
@@ -24,6 +25,8 @@ public class Staff {
     public boolean isAvailable() {
         return isAvailable;
     }
+    public void setAvailable(boolean available) { isAvailable = available; }
+
 
     /**
      * Get staff member personal information
