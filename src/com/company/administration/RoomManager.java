@@ -54,5 +54,6 @@ public class RoomManager {
      * @param room   room to be freed
      */
     public void unbookRoom(RoomAccess access, Room room) {
+        room.checkOut();
     }
 }
