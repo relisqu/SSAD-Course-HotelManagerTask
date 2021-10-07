@@ -7,11 +7,13 @@ import com.company.room.RoomType;
 
 import java.sql.Time;
 
-
+/**
+ * Represents Hotel Room Manager.
+ * He resolves everything related to rooms
+ * and their availability.
+ */
 public class RoomManager {
-    public RoomManager() {
-
-    }
+    public RoomManager() {}
 
     /**
      * This method allows us to book a room.
@@ -21,6 +23,7 @@ public class RoomManager {
      * and suitability by attributes.
      * If all parameters are met, the room is reserved.
      * It does not return anything, it only changes the parameters of a specific room.
+     * @param access      hotel rooms information
      * @param client - human, who want to book the room
      * @param type - type of the room for booking
      * @param peopleCount - number of people for booking
@@ -48,4 +51,13 @@ public class RoomManager {
     public void unbookRoom(RoomAccess access, Room room){
         room.CheckOut();
     }
+
+    /**
+     * Try to free room from a client.
+     * E.g. departure time has come or
+     * the client decided to leave himself.
+     * @param access hotel rooms information
+     * @param room   room to be freed
+     */
+    public void unbookRoom(RoomAccess access, Room room){}
 }
