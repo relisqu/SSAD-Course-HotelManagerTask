@@ -9,6 +9,7 @@ public class StandardRoom implements Room {
     private int currentResidentsCount;
     private Human resident;
     private boolean isOccupied;
+    private RoomType type;
 
 
     /**
@@ -19,9 +20,10 @@ public class StandardRoom implements Room {
      * @param number room number
      * @param size   maximum number of residents
      */
-    public StandardRoom(int size, int number) {
+    public StandardRoom(int size, int number, RoomType type) {
         this.size = size;
         this.number = number;
+        this.type = type;
     }
 
 
@@ -100,4 +102,14 @@ public class StandardRoom implements Room {
     public int getCurrentResidentsCount() {
         return currentResidentsCount;
     }
+
+    /**
+     * Get information of a room service type
+     * @return room type
+     */
+    @Override
+    public RoomType getType() {
+        return type;
+    }
+
 }

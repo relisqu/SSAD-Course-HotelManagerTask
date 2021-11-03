@@ -14,4 +14,6 @@ public interface Room {
     int getCurrentResidentsCount();
 
     boolean isOccupied();
+
+    RoomType getType();
 }

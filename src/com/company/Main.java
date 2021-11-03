@@ -1,8 +1,11 @@
 package com.company;
 
+import com.company.room.StandardRoom;
+
 public class Main {
 
-    public static void main(String[] args) {/*
+    public static void main(String[] args) {
+        StandardRoom roomHuyum= new StandardRoom((int) Double.POSITIVE_INFINITY,105);/*
         ArrayList<Room> hotelRooms = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
         // hotelRooms.add(new Room(i+1,2, RoomType.ECONOMY));

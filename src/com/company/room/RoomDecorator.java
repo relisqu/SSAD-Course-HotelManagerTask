@@ -38,4 +38,9 @@ public abstract class RoomDecorator implements Room {
     public boolean isOccupied() {
         return wrappedRoom.isOccupied();
     }
+
+    @Override
+    public RoomType getType() {
+        return  wrappedRoom.getType();
+    }
 }
