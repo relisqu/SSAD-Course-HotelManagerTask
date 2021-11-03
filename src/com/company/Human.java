@@ -13,6 +13,7 @@ public class Human {
 
     /**
      * Parametrized constructor allowing to specify human personal data
+     *
      * @param surname person last name
      * @param name    person first name
      */
@@ -24,6 +25,7 @@ public class Human {
 
     /**
      * Get person first name
+     *
      * @return first name
      */
     public String getName() {
@@ -32,6 +34,7 @@ public class Human {
 
     /**
      * Get person second name
+     *
      * @return second name
      */
     public String getSurname() {
@@ -40,6 +43,7 @@ public class Human {
 
     /**
      * Get person unique id
+     *
      * @return UUID
      */
     public UUID getId() {

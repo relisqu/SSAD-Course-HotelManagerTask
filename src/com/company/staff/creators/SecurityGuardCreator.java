@@ -11,10 +11,11 @@ import com.company.staff.StaffType;
 public class SecurityGuardCreator extends StaffCreator {
     /**
      * Create (generally hire) a new Security Guard
+     *
      * @return new staff member
      */
     @Override
-    public Staff createStaff(Human information, StaffType type){
-        return new SecurityGuard(information,type);
+    public Staff createStaff(Human information, StaffType type) {
+        return new SecurityGuard(information, type);
     }
 }

@@ -5,7 +5,7 @@ import com.company.Human;
 /**
  * Represents Carpenter staff member
  */
-public class Carpenter extends Staff{
+public class Carpenter extends Staff {
     public Carpenter(Human personalInformation, StaffType type) {
         super(personalInformation, type);
     }

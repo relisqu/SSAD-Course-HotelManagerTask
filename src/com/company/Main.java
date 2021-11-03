@@ -1,28 +1,14 @@
 package com.company;
 
-import com.company.administration.RoomManager;
-import com.company.administration.StaffManager;
-import com.company.room.Room;
-import com.company.room.RoomType;
-import com.company.staff.Plumber;
-import com.company.staff.SecurityGuard;
-import com.company.staff.Staff;
-import com.company.staff.StaffType;
-import com.company.staff.creators.PlumberCreator;
-import com.company.staff.creators.SecurityGuardCreator;
-import com.company.staff.creators.StaffCreator;
-
-import java.util.ArrayList;
-
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {/*
         ArrayList<Room> hotelRooms = new ArrayList<>();
         for (int i = 0; i < 15; i++) {
-            hotelRooms.add(new Room(i+1,2, RoomType.ECONOMY));
+        // hotelRooms.add(new Room(i+1,2, RoomType.ECONOMY));
         }
         for (int i = 0; i < 15; i++) {
-            hotelRooms.add(new Room(i+16,3, RoomType.LUX));
+        //    hotelRooms.add(new Room(i+16,3, RoomType.LUX));
         }
         Hotel hotel = new Hotel(hotelRooms);
         RoomManager roomManager=new RoomManager();
@@ -52,35 +38,35 @@ public class Main {
         }
         System.out.println("Fired everybody");
         staffManager.makeOrder(Plumber.class, hotel,2,"Help, our pump was broken :(");
-        roomManager.bookRoom(hotel, client1, RoomType.LUX, 2);
-        roomManager.bookRoom(hotel, client2, RoomType.ECONOMY, 1);
+     //   roomManager.bookRoom(hotel, client1, RoomType.LUX, 2);
+     //   roomManager.bookRoom(hotel, client2, RoomType.ECONOMY, 1);
         ArrayList<Room> rooms = roomManager.getRoomList(hotel);
         for (Room room : rooms) {
             if (room.isOccupied()) {
                 if (room.getType() == RoomType.LUX) {
                     System.out.println("Found the room where Ann lives!");
                     System.out.println("People live here: " + room.getCurrentResidentsCount());
-                    System.out.println("Room number: " + room.getNumber());
-                    System.out.println("Room is occupied? " + room.isOccupied());
+                    System.out.println("com.company.room.Room number: " + room.getNumber());
+                    System.out.println("com.company.room.Room is occupied? " + room.isOccupied());
                     roomManager.unbookRoom(hotel, room);
                     System.out.println("Kicked her out!");
                     System.out.println("People live here: " + room.getCurrentResidentsCount());
-                    System.out.println("Room number: " + room.getNumber());
-                    System.out.println("Room is occupied? " + room.isOccupied());
+                    System.out.println("com.company.room.Room number: " + room.getNumber());
+                    System.out.println("com.company.room.Room is occupied? " + room.isOccupied());
                 }
                 if (room.getType() == RoomType.ECONOMY) {
                     System.out.println("Found the room where Karina lives!");
                     System.out.println("People live here: " + room.getCurrentResidentsCount());
-                    System.out.println("Room number: " + room.getNumber());
-                    System.out.println("Room is occupied? " + room.isOccupied());
+                    System.out.println("com.company.room.Room number: " + room.getNumber());
+                    System.out.println("com.company.room.Room is occupied? " + room.isOccupied());
                     roomManager.unbookRoom(hotel, room);
                     System.out.println("Kicked her out!");
                     System.out.println("People live here: " + room.getCurrentResidentsCount());
-                    System.out.println("Room number: " + room.getNumber());
-                    System.out.println("Room is occupied? " + room.isOccupied());
+                    System.out.println("com.company.room.Room number: " + room.getNumber());
+                    System.out.println("com.company.room.Room is occupied? " + room.isOccupied());
                     System.out.println("\n\n");
                 }
-            }
-        }
+        }*/
     }
 }
+
