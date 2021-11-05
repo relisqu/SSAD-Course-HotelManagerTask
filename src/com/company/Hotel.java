@@ -2,6 +2,7 @@ package com.company;
 
 import com.company.room.Room;
 import com.company.staff.Staff;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.stream.Collectors;
@@ -15,6 +16,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Parametrized constructor allows specifying initial rooms set
+     *
      * @param rooms initial rooms set
      */
     public Hotel(ArrayList<Room> rooms) {
@@ -23,6 +25,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Get information of currently available staff
+     *
      * @return available hotel staff
      */
     @Override
@@ -32,6 +35,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Update staff information
+     *
      * @param updatedStaff new staff information
      */
     @Override
@@ -48,6 +52,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Remove hotel staff
+     *
      * @param deletedStaff to be fired
      */
     @Override
@@ -64,6 +69,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Find new staff members
+     *
      * @param createdStaff staff to be hired
      */
     @Override
@@ -81,6 +87,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Get hotel rooms information
+     *
      * @return hotel rooms list
      */
     @Override
@@ -90,6 +97,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Update hotel rooms information
+     *
      * @param updatedRooms rooms to be updated
      */
     @Override
@@ -106,6 +114,7 @@ public class Hotel implements RoomAccess, StaffAccess {
 
     /**
      * Make some hotel rooms unavailable
+     *
      * @param deletedRooms rooms to be removed
      */
     @Override

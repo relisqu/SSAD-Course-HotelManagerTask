@@ -10,9 +10,10 @@ import com.company.staff.StaffType;
 public class StaffCreator {
     /**
      * Creates (generally hires) a new staff
+     *
      * @return hired staff member
      */
-    public Staff createStaff(Human information, StaffType type){
-        return new Staff(information,type);
+    public Staff createStaff(Human information, StaffType type) {
+        return new Staff(information, type);
     }
 }
