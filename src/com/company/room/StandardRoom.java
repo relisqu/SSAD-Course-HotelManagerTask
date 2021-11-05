@@ -2,6 +2,10 @@ package com.company.room;
 
 import com.company.Human;
 
+/**
+ * Class representing standard hotel room
+ * which is the most common room in the hotel.
+ */
 public class StandardRoom extends Room {
 
     private int number;
@@ -99,5 +103,4 @@ public class StandardRoom extends Room {
     public RoomType getType() {
         return type;
     }
-
 }

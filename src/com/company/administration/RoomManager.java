@@ -13,8 +13,7 @@ import java.util.ArrayList;
  * and their availability.
  */
 public class RoomManager {
-    public RoomManager() {
-    }
+    public RoomManager() {}
 
     /**
      * This method allows us to book a room.
@@ -30,15 +29,21 @@ public class RoomManager {
      * @param type        type of the room for booking
      * @param peopleCount number of people for booking
      */
-    public void bookRoom(RoomAccess access, Human client,
-                                          RoomType type, int peopleCount) {
+    public void bookRoom(RoomAccess access, Human client, RoomType type, int peopleCount) {
         Room currentRoom;
         for (int i = 0; i < access.getRooms().size(); i++) {
             currentRoom = access.getRooms().get(i);
-            if (!currentRoom.isOccupied() && currentRoom.getSize() >= peopleCount && currentRoom.getType() == type) {
-                currentRoom.checkIn(client, peopleCount);
-                break;
+            if (currentRoom.isOccupied()) {
+                continue;
             }
+            if (currentRoom.getSize() < peopleCount) {
+                continue;
+            }
+            if (currentRoom.getType() != type) {
+                continue;
+            }
+            currentRoom.checkIn(client, peopleCount);
+            break;
         }
     }
 
