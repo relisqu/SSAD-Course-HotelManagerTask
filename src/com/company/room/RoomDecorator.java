@@ -45,9 +45,14 @@ public abstract class RoomDecorator extends Room {
      * the method of wrapped instance
      */
     @Override
-    public int getSize() {
-        return wrappedRoom.getSize();
-    }
+    public int getSize() { return wrappedRoom.getSize(); }
+
+    /**
+     * Forwarding method which by default calls
+     * the method of wrapped instance
+     */
+    @Override
+    protected void setSize(int size) { wrappedRoom.setSize(size); }
 
     /**
      * Forwarding method which by default calls
