@@ -20,7 +20,7 @@ public class StandardRoom extends Room {
      * @param size   maximum number of residents
      */
     public StandardRoom(int size, int number, RoomType type) {
-        this.size = size;
+        this.setSize(size);
         this.number = number;
         this.type = type;
     }
@@ -52,17 +52,6 @@ public class StandardRoom extends Room {
             isOccupied = false;
         }
     }
-
-    /**
-     * Get information of room maximum number of residents.
-     *
-     * @return maximum number of residents
-     */
-    @Override
-    public int getSize() {
-        return size;
-    }
-
     /**
      * Get room number
      *

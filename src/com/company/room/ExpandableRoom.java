@@ -5,11 +5,9 @@ public class ExpandableRoom extends RoomDecorator {
         super(room);
     }
     public void addBed(){
-        size++;
+        super.setSize(super.getSize()+1);
     }
     public void removeBed(){
-        if(getSize()>1 && getCurrentResidentsCount()<getSize()){
-            size--;
-        }
+        super.setSize(super.getSize()-1);
     }
 }

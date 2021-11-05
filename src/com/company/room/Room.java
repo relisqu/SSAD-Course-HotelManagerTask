@@ -3,12 +3,12 @@ package com.company.room;
 import com.company.Human;
 
 public abstract class Room {
-    protected int size;
+    private int size;
+
     abstract void checkIn(Human resident, int residentsCount);
 
     abstract void checkOut();
 
-    abstract int getSize();
 
     abstract int getNumber();
 
@@ -17,4 +17,14 @@ public abstract class Room {
     abstract boolean isOccupied();
 
     abstract RoomType getType();
+
+    protected void setSize(int newSize) {
+        if (newSize >= getCurrentResidentsCount() && newSize >= 0) {
+            size = newSize;
+        }
+    }
+
+    protected int getSize() {
+        return size;
+    }
 }
