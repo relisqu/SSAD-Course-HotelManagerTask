@@ -2,18 +2,19 @@ package com.company.room;
 
 import com.company.Human;
 
-public interface Room {
-    void checkIn(Human resident, int residentsCount);
+public abstract class Room {
+    protected int size;
+    abstract void checkIn(Human resident, int residentsCount);
 
-    void checkOut();
+    abstract void checkOut();
 
-    int getSize();
+    abstract int getSize();
 
-    int getNumber();
+    abstract int getNumber();
 
-    int getCurrentResidentsCount();
+    abstract int getCurrentResidentsCount();
 
-    boolean isOccupied();
+    abstract boolean isOccupied();
 
-    RoomType getType();
+    abstract RoomType getType();
 }

@@ -2,9 +2,8 @@ package com.company.room;
 
 import com.company.Human;
 
-public class StandardRoom implements Room {
+public class StandardRoom extends Room {
 
-    private int size;
     private int number;
     private int currentResidentsCount;
     private Human resident;

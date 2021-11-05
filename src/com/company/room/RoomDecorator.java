@@ -2,7 +2,7 @@ package com.company.room;
 
 import com.company.Human;
 
-public abstract class RoomDecorator implements Room {
+public abstract class RoomDecorator extends Room {
     private StandardRoom wrappedRoom;
 
     public RoomDecorator(StandardRoom room) {
