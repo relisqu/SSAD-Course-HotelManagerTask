@@ -28,15 +28,15 @@ public abstract class Staff {
     }
 
 
-    abstract void comeToRoom(int roomNumber);
+    abstract protected void comeToRoom(int roomNumber);
 
-    abstract void communicateWithClient();
+    abstract protected void communicateWithClient();
 
-    abstract boolean tryProvideService();
+    abstract protected boolean tryProvideService();
 
-    abstract void manageProvideServiceError();
+    abstract protected void manageProvideServiceError();
 
-    abstract void requestPayment();
+    abstract protected void requestPayment();
 
     /**
      * Check whether this staff member is available

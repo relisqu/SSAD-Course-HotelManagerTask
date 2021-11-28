@@ -18,12 +18,13 @@ public class Electrician extends Staff {
 
     @Override
     void communicateWithClient() {
-        System.out.println("Again problems with lights in bathroom?!");
+        System.out.println("Again problems with lights in bathroom?");
     }
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random()+3)%100;
+        double isAbleToProvideService = (Math.random()+3)%100;
+        System.out.println("Trying to fix the lighting.");
         if(isAbleToProvideService < 50){
             System.out.println("Sorry, I don't wanted to break up rest of bulbs...");
             return false;

@@ -17,14 +17,15 @@ public class Cook extends Staff {
 
     @Override
     void communicateWithClient() {
-        System.out.println("Do you want salad with cockroaches and warms?");
+        System.out.println("Do you want salad with garlic?");
     }
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random()+5)%100;
+        double isAbleToProvideService = (Math.random()+5)%100;
+        System.out.println("Here is your dish! Bonna appetite!");
         if(isAbleToProvideService < 50){
-            System.out.println("Seems, you don't like it...");
+            System.out.println("The ingredients are wrong? I am sorry.");
             return false;
         }
         return true;
@@ -32,7 +33,7 @@ public class Cook extends Staff {
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("Okay( Maybe you want Caesar salad(also with warms)?");
+        System.out.println("I will redo the salad, my apologises.");
     }
 
     @Override

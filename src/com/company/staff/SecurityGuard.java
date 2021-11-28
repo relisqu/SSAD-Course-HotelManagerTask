@@ -17,12 +17,13 @@ public class SecurityGuard extends Staff {
 
     @Override
     void communicateWithClient() {
-        System.out.println("Hey man, what protection do you need?");
+        System.out.println("Hey man, what kind of protection would you need?");
     }
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random()+1)%100;
+        double isAbleToProvideService = (Math.random()+1)%100;
+        System.out.println("Good afternoon, let me bodyguard you.");
         if(isAbleToProvideService < 50){
             System.out.println("Oh, you wanted psychological security? Sorry...");
             return false;

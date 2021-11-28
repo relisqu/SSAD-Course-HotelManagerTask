@@ -17,14 +17,15 @@ public class Deliveryman extends Staff {
 
     @Override
     void communicateWithClient() {
-        System.out.println("I know you called YandexRover, but it is not working and I took your BigBoss shaverma");
+        System.out.println("Hello! Would you like to order Burger? We will deliver it in a minute!");
     }
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random()+4)%100;
+        double isAbleToProvideService = (Math.random()+4)%100;
+        System.out.println("Good afternoon, here are your products.");
         if(isAbleToProvideService < 50){
-            System.out.println("What? You haven't ordered shaverma, but ordered potato?!");
+            System.out.println("You haven't ordered burger, but ordered potato? I am sorry for this delivery mistake.");
             return false;
         }
         return true;
@@ -32,7 +33,7 @@ public class Deliveryman extends Staff {
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("Please, try this shaverma, I hope it will help you lose weight if you wish");
+        System.out.println("Here is your burger.");
     }
 
     @Override

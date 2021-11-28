@@ -22,9 +22,11 @@ public class Plumber extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random()+2)%100;
+        double isAbleToProvideService =  (Math.random()+2)%100;
+
+        System.out.println("Trying to fix pipes.");
         if(isAbleToProvideService < 50){
-            System.out.println("I guess we need new pipes");
+            System.out.println("They are destroyed, I can't recover it. I guess we need new pipes.");
             return false;
         }
         return true;
@@ -32,7 +34,7 @@ public class Plumber extends Staff {
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("Let me ask new pipes from manager");
+        System.out.println("Let me ask new pipes from manager.");
     }
 
     @Override

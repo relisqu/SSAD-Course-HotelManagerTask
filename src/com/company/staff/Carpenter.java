@@ -18,14 +18,15 @@ public class Carpenter extends Staff {
 
     @Override
     void communicateWithClient() {
-        System.out.println("No, I am not selling carpets, I am working with wood");
+        System.out.println("What kind of furniture would you like to fix?");
     }
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random())%100;
+        double isAbleToProvideService = (Math.random())%100;
+        System.out.println("Here is your fix.");
         if(isAbleToProvideService < 50){
-            System.out.println("It is sad, that you feel nostalgic about your home country interior");
+            System.out.println("Is it still broken?");
             return false;
         }
         return true;
@@ -33,7 +34,7 @@ public class Carpenter extends Staff {
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("Well, if you want carpet we can go to the bazar");
+        System.out.println("My apologies, let us fix it again.");
     }
 
     @Override

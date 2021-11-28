@@ -17,14 +17,15 @@ public class Cleaner extends Staff {
 
     @Override
     void communicateWithClient() {
-        System.out.println("I entered without knocking, but hope you are dressed up");
+        System.out.println("Good afternoon! Please remove objects from the table.");
     }
 
     @Override
     boolean tryProvideService() {
-        int isAbleToProvideService = (Math.random()+6)%100;
+        double isAbleToProvideService = (Math.random()+6)%100;
+        System.out.println("The cleaning is done, thank you!");
         if(isAbleToProvideService < 50){
-            System.out.println("Oh, you said your room has become dirtier after our visit?");
+            System.out.println("Unfortunately, cleaning of the bathroom is the duty of other department.");
             return false;
         }
         return true;
@@ -32,7 +33,7 @@ public class Cleaner extends Staff {
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("If you don't like our service, you can wrote about it to Mr. Seednight");
+        System.out.println("Let us call them.");
     }
 
     @Override
