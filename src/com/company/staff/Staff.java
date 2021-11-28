@@ -18,7 +18,7 @@ public abstract class Staff {
     /**
      * Performs the work member required to do.
      */
-    public final void doJob(int roomNumber, String message) {
+    public final void doJob(int roomNumber) {
         comeToRoom(roomNumber);
         communicateWithClient();
         if (!tryProvideService()) {
