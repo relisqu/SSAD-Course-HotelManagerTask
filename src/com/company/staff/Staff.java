@@ -5,7 +5,7 @@ import com.company.Human;
 /**
  * Represents staff member
  */
-public class Staff {
+public abstract class Staff {
     private StaffType type;
     private Human personalInformation;
     private boolean isAvailable;
@@ -18,10 +18,25 @@ public class Staff {
     /**
      * Performs the work member required to do.
      */
-    public void doJob(int roomNumber, String message) {
-        System.out.println("I am doing my job\n");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
+    public final void doJob(int roomNumber, String message) {
+        comeToRoom(roomNumber);
+        communicateWithClient();
+        if (!tryProvideService()) {
+            manageProvideServiceError();
+        }
+        requestPayment();
     }
+
+
+    abstract void comeToRoom(int roomNumber);
+
+    abstract void communicateWithClient();
+
+    abstract boolean tryProvideService();
+
+    abstract void manageProvideServiceError();
+
+    abstract void requestPayment();
 
     /**
      * Check whether this staff member is available

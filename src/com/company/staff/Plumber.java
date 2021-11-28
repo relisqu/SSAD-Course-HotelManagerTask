@@ -10,14 +10,29 @@ public class Plumber extends Staff {
         super(personalInformation, type);
     }
 
-    /**
-     * Performs the Plumber required to do.
-     */
     @Override
-    public void doJob(int roomNumber, String message) {
-        setAvailable(false);
-        System.out.println("I am Plumber. I came to clean your pipes");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
-        setAvailable(true);
+    void comeToRoom(int roomNumber) {
+
     }
+
+    @Override
+    void communicateWithClient() {
+
+    }
+
+    @Override
+    boolean tryProvideService() {
+        return false;
+    }
+
+    @Override
+    void manageProvideServiceError() {
+
+    }
+
+    @Override
+    void requestPayment() {
+
+    }
+
 }

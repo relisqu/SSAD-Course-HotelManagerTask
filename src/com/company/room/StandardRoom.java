@@ -56,6 +56,7 @@ public class StandardRoom extends Room {
             isOccupied = false;
         }
     }
+
     /**
      * Get room number
      *
@@ -97,6 +98,7 @@ public class StandardRoom extends Room {
 
     /**
      * Get information of a room service type
+     *
      * @return room type
      */
     @Override

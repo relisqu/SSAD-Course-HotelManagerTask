@@ -49,12 +49,19 @@ public abstract class Room {
      */
     abstract public RoomType getType();
 
+<<<<<<< Updated upstream
     /**
      * Protected setter for a room size, which makes it
      * possible to resize room right on the fly
      *
      * @param newSize integer new size of the room
      */
+=======
+    protected int getSize() {
+        return size;
+    }
+
+>>>>>>> Stashed changes
     protected void setSize(int newSize) {
         if (newSize < 0) {
             return;
@@ -64,6 +71,7 @@ public abstract class Room {
         }
         size = newSize;
     }
+<<<<<<< Updated upstream
 
     /**
      * Public getter of the current room size
@@ -73,4 +81,6 @@ public abstract class Room {
     public int getSize() {
         return size;
     }
+=======
+>>>>>>> Stashed changes
 }
