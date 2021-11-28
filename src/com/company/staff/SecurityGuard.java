@@ -14,7 +14,7 @@ public class SecurityGuard extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void comeToRoom(int roomNumber) {
+    protected void comeToRoom(int roomNumber) {
         System.out.println("I am SecurityGuard and I came to room "+roomNumber);
     }
 
@@ -22,7 +22,7 @@ public class SecurityGuard extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void communicateWithClient() {
+    protected void communicateWithClient() {
         System.out.println("Hey man, what kind of protection would you need?");
     }
 
@@ -30,7 +30,7 @@ public class SecurityGuard extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    boolean tryProvideService() {
+    protected boolean tryProvideService() {
         double isAbleToProvideService = (Math.random()+1)%100;
         System.out.println("Good afternoon, let me bodyguard you.");
         if(isAbleToProvideService < 50){
@@ -44,7 +44,7 @@ public class SecurityGuard extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void manageProvideServiceError() {
+    protected void manageProvideServiceError() {
         System.out.println("Let me assign you to my friend, great psychologist");
     }
 
@@ -52,7 +52,7 @@ public class SecurityGuard extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void requestPayment() {
+    protected void requestPayment() {
         System.out.println("Gimme 7k, I will protect you from firemen");
     }
 

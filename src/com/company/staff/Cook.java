@@ -14,7 +14,7 @@ public class Cook extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void comeToRoom(int roomNumber) {
+    protected void comeToRoom(int roomNumber) {
         System.out.println("I am Cook and I came to room "+roomNumber);
     }
 
@@ -22,7 +22,7 @@ public class Cook extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void communicateWithClient() {
+    protected void communicateWithClient() {
         System.out.println("Do you want salad with garlic?");
     }
 
@@ -30,7 +30,7 @@ public class Cook extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    boolean tryProvideService() {
+    protected boolean tryProvideService() {
         double isAbleToProvideService = (Math.random()+5)%100;
         System.out.println("Here is your dish! Bonna appetite!");
         if(isAbleToProvideService < 50){
@@ -44,7 +44,7 @@ public class Cook extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void manageProvideServiceError() {
+    protected void manageProvideServiceError() {
         System.out.println("I will redo the salad, my apologises.");
     }
 
@@ -52,7 +52,7 @@ public class Cook extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void requestPayment() {
+    protected void requestPayment() {
         System.out.println("No need to pay. Just come to stolovka");
     }
 }
