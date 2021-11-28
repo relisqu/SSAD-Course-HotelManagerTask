@@ -10,16 +10,25 @@ public class Cleaner extends Staff {
         super(personalInformation, type);
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void comeToRoom(int roomNumber) {
         System.out.println("I am Cleaner and I came to room "+roomNumber);
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void communicateWithClient() {
         System.out.println("Good afternoon! Please remove objects from the table.");
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     boolean tryProvideService() {
         double isAbleToProvideService = (Math.random()+6)%100;
@@ -31,11 +40,17 @@ public class Cleaner extends Staff {
         return true;
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void manageProvideServiceError() {
         System.out.println("Let us call them.");
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void requestPayment() {
         System.out.println("145 rubles per square meter");
