@@ -27,15 +27,41 @@ public abstract class Staff {
         requestPayment();
     }
 
-
+    /**
+    * Work algorithm step: arrival to the
+    * room where maintenance is needed.
+    *
+    * @param roomNumber - room to visit
+    */
     abstract protected void comeToRoom(int roomNumber);
 
+    /**
+    * Work algorithm step: communication
+    * with the client to determine the
+    * problems occured.
+    */
     abstract protected void communicateWithClient();
 
+    /**
+    * Work algorithm step: try to resolve
+    * the issue the client specified.
+    */
     abstract protected boolean tryProvideService();
 
+    /**
+    * Work algorithm step: sometimes it is 
+    * impossible to fix the issue. (e.g. 
+    * insufficient supply or time limit)
+    * That is why it is necessary to manage
+    * the errors.
+    */
     abstract protected void manageProvideServiceError();
 
+    /**
+    * Work algorithm step: a worker needs
+    * the payment, it may be implemented 
+    * either way (hourly/per order/etc)
+    */
     abstract protected void requestPayment();
 
     /**
@@ -47,6 +73,11 @@ public abstract class Staff {
         return isAvailable;
     }
 
+    /**
+    * Avaiability setter for a staff member
+    *
+    * @param avaiable set the staff member avaiability with provided value
+    */
     public void setAvailable(boolean available) {
         isAvailable = available;
     }
