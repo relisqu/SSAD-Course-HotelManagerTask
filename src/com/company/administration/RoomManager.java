@@ -29,12 +29,7 @@ public class RoomManager {
      * @param type        type of the room for booking
      * @param peopleCount number of people for booking
      */
-<<<<<<< Updated upstream
     public void bookRoom(RoomAccess access, Human client, RoomType type, int peopleCount) {
-=======
-    public void bookRoom(RoomAccess access, Human client,
-                         RoomType type, int peopleCount) {
->>>>>>> Stashed changes
         Room currentRoom;
         for (int i = 0; i < access.getRooms().size(); i++) {
             currentRoom = access.getRooms().get(i);
