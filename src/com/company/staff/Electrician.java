@@ -15,7 +15,7 @@ public class Electrician extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void comeToRoom(int roomNumber) {
+    protected void comeToRoom(int roomNumber) {
         System.out.println("I am Electrician and I came to room "+roomNumber);
     }
 
@@ -23,7 +23,7 @@ public class Electrician extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void communicateWithClient() {
+    protected void communicateWithClient() {
         System.out.println("Again problems with lights in bathroom?");
     }
 
@@ -31,7 +31,7 @@ public class Electrician extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    boolean tryProvideService() {
+    protected boolean tryProvideService() {
         double isAbleToProvideService = (Math.random()+3)%100;
         System.out.println("Trying to fix the lighting.");
         if(isAbleToProvideService < 50){
@@ -45,7 +45,7 @@ public class Electrician extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void manageProvideServiceError() {
+    protected void manageProvideServiceError() {
         System.out.println("Let me go and take 5 more bulbs");
     }
 
@@ -53,7 +53,7 @@ public class Electrician extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void requestPayment() {
+    protected void requestPayment() {
         System.out.println("No need to pay me. It's better to pay attention to the nature!");
     }
 }

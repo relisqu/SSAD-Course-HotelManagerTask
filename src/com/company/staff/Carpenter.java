@@ -14,7 +14,7 @@ public class Carpenter extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void comeToRoom(int roomNumber) {
+    protected void comeToRoom(int roomNumber) {
         System.out.println("I am Carpenter and I came to room " + roomNumber);
     }
 
@@ -22,7 +22,7 @@ public class Carpenter extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void communicateWithClient() {
+    protected void communicateWithClient() {
         System.out.println("What kind of furniture would you like to fix?");
     }
 
@@ -30,7 +30,7 @@ public class Carpenter extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    boolean tryProvideService() {
+    protected boolean tryProvideService() {
         double isAbleToProvideService = (Math.random()) % 100;
         System.out.println("Here is your fix.");
         if(isAbleToProvideService < 50){
@@ -44,7 +44,7 @@ public class Carpenter extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void manageProvideServiceError() {
+    protected void manageProvideServiceError() {
         System.out.println("My apologies, let us fix it again.");
     }
 
@@ -52,7 +52,7 @@ public class Carpenter extends Staff {
     * Templated in Staff service algorithm step implementation.
     */
     @Override
-    void requestPayment() {
+    protected void requestPayment() {
         System.out.println("Nowadays wood is very expensive. Be a man. Plant a tree.");
     }
 }
