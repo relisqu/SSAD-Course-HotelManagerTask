@@ -1,7 +1,6 @@
 package com.company.staff;
 
 import com.company.Human;
-import com.company.Main;
 
 /**
  * Represents Carpenter staff member
@@ -13,7 +12,7 @@ public class Carpenter extends Staff {
 
     @Override
     void comeToRoom(int roomNumber) {
-        System.out.println("I am Carpenter and I came to room "+roomNumber);
+        System.out.println("I am Carpenter and I came to room " + roomNumber);
     }
 
     @Override
@@ -23,7 +22,7 @@ public class Carpenter extends Staff {
 
     @Override
     boolean tryProvideService() {
-        double isAbleToProvideService = (Math.random())%100;
+        double isAbleToProvideService = (Math.random()) % 100;
         System.out.println("Here is your fix.");
         if(isAbleToProvideService < 50){
             System.out.println("Is it still broken?");
@@ -41,6 +40,4 @@ public class Carpenter extends Staff {
     void requestPayment() {
         System.out.println("Nowadays wood is very expensive. Be a man. Plant a tree.");
     }
-
-
 }
