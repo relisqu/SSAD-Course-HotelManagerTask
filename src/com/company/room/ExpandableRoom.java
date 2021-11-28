@@ -15,7 +15,6 @@ public class ExpandableRoom extends RoomDecorator {
         super(room);
     }
 
-<<<<<<< Updated upstream
     /**
      * Public API for increasing the size of the room
      */
@@ -27,13 +26,6 @@ public class ExpandableRoom extends RoomDecorator {
      * Public API for decreasing the size of the room
      */
     public void removeBed(){
-=======
-    public void addBed() {
-        super.setSize(super.getSize() + 1);
-    }
-
-    public void removeBed() {
->>>>>>> Stashed changes
         super.setSize(super.getSize() - 1);
     }
 }
