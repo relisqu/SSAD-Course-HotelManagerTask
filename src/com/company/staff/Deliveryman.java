@@ -10,16 +10,25 @@ public class Deliveryman extends Staff {
         super(personalInformation, type);
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void comeToRoom(int roomNumber) {
         System.out.println("I am Deliveryman and I came to room "+roomNumber);
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void communicateWithClient() {
         System.out.println("Hello! Would you like to order Burger? We will deliver it in a minute!");
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     boolean tryProvideService() {
         double isAbleToProvideService = (Math.random()+4)%100;
@@ -31,11 +40,17 @@ public class Deliveryman extends Staff {
         return true;
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void manageProvideServiceError() {
         System.out.println("Here is your burger.");
     }
 
+    /**
+    * Templated in Staff service algorithm step implementation.
+    */
     @Override
     void requestPayment() {
         System.out.println("What?! You have tons of promocodes for free delivery?!");
