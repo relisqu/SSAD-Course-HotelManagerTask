@@ -10,14 +10,35 @@ public class Electrician extends Staff {
         super(personalInformation, type);
     }
 
-    /**
-     * Performs the Electrician required to do.
-     */
+
     @Override
-    public void doJob(int roomNumber, String message) {
-        setAvailable(false);
-        System.out.println("I am Electrician. I heard you have no electricity, so I brought you candle");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
-        setAvailable(true);
+    void comeToRoom(int roomNumber) {
+        System.out.println("I am Electrician and I came to room "+roomNumber);
+    }
+
+    @Override
+    void communicateWithClient() {
+        System.out.println("Again problems with lights in bathroom?");
+    }
+
+    @Override
+    boolean tryProvideService() {
+        double isAbleToProvideService = (Math.random()+3)%100;
+        System.out.println("Trying to fix the lighting.");
+        if(isAbleToProvideService < 50){
+            System.out.println("Sorry, I don't wanted to break up rest of bulbs...");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    void manageProvideServiceError() {
+        System.out.println("Let me go and take 5 more bulbs");
+    }
+
+    @Override
+    void requestPayment() {
+        System.out.println("No need to pay me. It's better to pay attention to the nature!");
     }
 }

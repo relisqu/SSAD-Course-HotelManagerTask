@@ -10,14 +10,34 @@ public class Cleaner extends Staff {
         super(personalInformation, type);
     }
 
-    /**
-     * Performs the Cleaner required to do.
-     */
     @Override
-    public void doJob(int roomNumber, String message) {
-        setAvailable(false);
-        System.out.println("I am Cleaner. I will come every 7-10 days. Or not");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
-        setAvailable(true);
+    void comeToRoom(int roomNumber) {
+        System.out.println("I am Cleaner and I came to room "+roomNumber);
+    }
+
+    @Override
+    void communicateWithClient() {
+        System.out.println("Good afternoon! Please remove objects from the table.");
+    }
+
+    @Override
+    boolean tryProvideService() {
+        double isAbleToProvideService = (Math.random()+6)%100;
+        System.out.println("The cleaning is done, thank you!");
+        if(isAbleToProvideService < 50){
+            System.out.println("Unfortunately, cleaning of the bathroom is the duty of other department.");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    void manageProvideServiceError() {
+        System.out.println("Let us call them.");
+    }
+
+    @Override
+    void requestPayment() {
+        System.out.println("145 rubles per square meter");
     }
 }

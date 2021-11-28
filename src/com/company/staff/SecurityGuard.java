@@ -10,14 +10,36 @@ public class SecurityGuard extends Staff {
         super(personalInformation, type);
     }
 
-    /**
-     * Performs the Security Guard required to do.
-     */
     @Override
-    public void doJob(int roomNumber, String message) {
-        setAvailable(false);
-        System.out.println("I am Security. Hey, where is your mask?!");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
-        setAvailable(true);
+    void comeToRoom(int roomNumber) {
+        System.out.println("I am SecurityGuard and I came to room "+roomNumber);
     }
+
+    @Override
+    void communicateWithClient() {
+        System.out.println("Hey man, what kind of protection would you need?");
+    }
+
+    @Override
+    boolean tryProvideService() {
+        double isAbleToProvideService = (Math.random()+1)%100;
+        System.out.println("Good afternoon, let me bodyguard you.");
+        if(isAbleToProvideService < 50){
+            System.out.println("Oh, you wanted psychological security? Sorry...");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    void manageProvideServiceError() {
+        System.out.println("Let me assign you to my friend, great psychologist");
+    }
+
+    @Override
+    void requestPayment() {
+        System.out.println("Gimme 7k, I will protect you from firemen");
+    }
+
+
 }

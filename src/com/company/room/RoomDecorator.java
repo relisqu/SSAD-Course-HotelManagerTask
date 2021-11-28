@@ -87,6 +87,6 @@ public abstract class RoomDecorator extends Room {
      */
     @Override
     public RoomType getType() {
-        return  wrappedRoom.getType();
+        return wrappedRoom.getType();
     }
 }

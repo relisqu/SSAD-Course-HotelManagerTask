@@ -10,14 +10,34 @@ public class Carpenter extends Staff {
         super(personalInformation, type);
     }
 
-    /**
-     * Performs the Carpenter required to do.
-     */
     @Override
-    public void doJob(int roomNumber, String message) {
-        setAvailable(false);
-        System.out.println("I am Carpenter. I will open bathroom door if you got stuck in it");
-        System.out.println("Currently in room: " + roomNumber + " fixing " + message);
-        setAvailable(true);
+    void comeToRoom(int roomNumber) {
+        System.out.println("I am Carpenter and I came to room " + roomNumber);
+    }
+
+    @Override
+    void communicateWithClient() {
+        System.out.println("What kind of furniture would you like to fix?");
+    }
+
+    @Override
+    boolean tryProvideService() {
+        double isAbleToProvideService = (Math.random()) % 100;
+        System.out.println("Here is your fix.");
+        if(isAbleToProvideService < 50){
+            System.out.println("Is it still broken?");
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    void manageProvideServiceError() {
+        System.out.println("My apologies, let us fix it again.");
+    }
+
+    @Override
+    void requestPayment() {
+        System.out.println("Nowadays wood is very expensive. Be a man. Plant a tree.");
     }
 }
