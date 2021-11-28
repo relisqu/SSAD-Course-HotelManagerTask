@@ -22,8 +22,12 @@ public class Cook extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int rand = (Math.random())%2;
-        return rand == 1;
+        int isAbleToProvideService = (Math.random()+5)%100;
+        if(isAbleToProvideService < 50){
+            System.out.println("Seems, you don't like it...");
+            return false;
+        }
+        return true;
     }
 
     @Override

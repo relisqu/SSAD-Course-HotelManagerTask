@@ -22,13 +22,17 @@ public class Deliveryman extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int rand = (Math.random())%2;
-        return rand == 1;
+        int isAbleToProvideService = (Math.random()+4)%100;
+        if(isAbleToProvideService < 50){
+            System.out.println("What? You haven't ordered shaverma, but ordered potato?!");
+            return false;
+        }
+        return true;
     }
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("What? You haven't ordered shaverma, but ordered potato?!");
+        System.out.println("Please, try this shaverma, I hope it will help you lose weight if you wish");
     }
 
     @Override

@@ -23,8 +23,12 @@ public class Carpenter extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int rand = (Math.random())%2;
-        return rand == 1;
+        int isAbleToProvideService = (Math.random())%100;
+        if(isAbleToProvideService < 50){
+            System.out.println("It is sad, that you feel nostalgic about your home country interior");
+            return false;
+        }
+        return true;
     }
 
     @Override

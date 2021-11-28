@@ -22,8 +22,12 @@ public class Plumber extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int rand = (Math.random())%2;
-        return rand == 1;
+        int isAbleToProvideService = (Math.random()+2)%100;
+        if(isAbleToProvideService < 50){
+            System.out.println("I guess we need new pipes");
+            return false;
+        }
+        return true;
     }
 
     @Override

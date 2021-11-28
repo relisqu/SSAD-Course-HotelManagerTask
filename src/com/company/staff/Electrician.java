@@ -23,13 +23,17 @@ public class Electrician extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int rand = (Math.random())%2;
-        return rand == 1;
+        int isAbleToProvideService = (Math.random()+3)%100;
+        if(isAbleToProvideService < 50){
+            System.out.println("Sorry, I don't wanted to break up rest of bulbs...");
+            return false;
+        }
+        return true;
     }
 
     @Override
     void manageProvideServiceError() {
-        System.out.println("Sorry, I don't wanted to break up rest of lights...");
+        System.out.println("Let me go and take 5 more bulbs");
     }
 
     @Override

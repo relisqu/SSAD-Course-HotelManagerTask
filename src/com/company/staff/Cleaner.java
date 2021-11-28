@@ -22,8 +22,12 @@ public class Cleaner extends Staff {
 
     @Override
     boolean tryProvideService() {
-        int rand = (Math.random())%2;
-        return rand == 1;
+        int isAbleToProvideService = (Math.random()+6)%100;
+        if(isAbleToProvideService < 50){
+            System.out.println("Oh, you said your room has become dirtier after our visit?");
+            return false;
+        }
+        return true;
     }
 
     @Override
